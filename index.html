@@ -1,216 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <title>freeCodeCamp Survey Form</title>
-</head>
-<body>
-  <div class="container">
-    <header class="header">
-      <h1 id="title" class="text-center">freeCodeCamp Survey Form</h1>
-      <p id="description" class="description text-center">
-        Thank you for taking the time to help us improve the platform
-      </p>
-    </header>
-    <form id="survey-form">
-      <div class="form-group">
-        <label id="name-label" for="name">Name</label>
-        <input
-          type="text"
-          name="name"
-          id="name"
-          class="form-control"
-          placeholder="Enter your name"
-          required
-        />
+  <head>
+    <meta charset="UTF-8">
+    <title>Nutrition Label</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800" rel="stylesheet">
+    <link href="./styles.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="label">
+      <header>
+        <h1 class="bold">Nutrition Facts</h1>
+        <div class="divider"></div>
+        <p>8 servings per container</p>
+        <p class="bold">Serving size <span class="right">2/3 cup (55g)</span></p>
+      </header>
+      <div class="divider lg"></div>
+      <div class="calories-info">
+        <p class="bold sm-text">Amount per serving</p>
+        <h1>Calories <span class="right">230</span></h1>
       </div>
-      <div class="form-group">
-        <label id="email-label" for="email">Email</label>
-        <input
-          type="email"
-          name="email"
-          id="email"
-          class="form-control"
-          placeholder="Enter your Email"
-          required
-        />
+      <div class="divider md"></div>
+      <div class="daily-value sm-text">
+        <p class="right bold no-divider">% Daily Value *</p>
+        <div class="divider"></div>
+        <p><span class="bold">Total Fat</span> 8g <span class="bold right">10%</span></p>
+        <p class="indent no-divider">Saturated Fat 1g <span class="bold right">5%</span></p>
+        <div class="divider"></div>
+        <p class="indent no-divider"><i>Trans</i> Fat 0g</p>
+        <div class="divider"></div>
+        <p><span class="bold">Cholesterol</span> 0mg <span class="right bold">0%</span></p>
+        <p><span class="bold">Sodium</span> 160mg <span class="right bold">7%</span></p>
+        <p><span class="bold">Total Carbohydrate</span> 37g <span class="right bold">13%</span></p>
+        <p class="indent no-divider">Dietary Fiber 4g</p>
+        <div class="divider"></div>
+        <p class="indent no-divider">Total Sugars 12g</p>
+        <div class="divider dbl-indent"></div>
+        <p class="dbl-indent no-divider">Includes 10g Added Sugars <span class="right bold">20%</span>
+        <div class="divider"></div>
+        <p class="no-divider"><span class="bold">Protein</span> 3g</p>
+        <div class="divider lg"></div>
+        <p>Vitamin D 2mcg <span class="right">10%</span></p>
+        <p>Calcium 260mg <span class="right">20%</span></p>
+        <p>Iron 8mg <span class="right">45%</span></p>
+        <p class="no-divider">Potassium 235mg <span class="right">6%</span></p>
       </div>
-      <div class="form-group">
-        <label id="number-label" for="number"
-          >Age<span class="clue">(optional)</span></label
-        >
-        <input
-          type="number"
-          name="age"
-          id="number"
-          min="10"
-          max="99"
-          class="form-control"
-          placeholder="Age"
-        />
-      </div>
-      <div class="form-group">
-        <p>Which option best describes your current role?</p>
-        <select id="dropdown" name="role" class="form-control" required>
-          <option disabled selected value>Select current role</option>
-          <option value="student">Student</option>
-          <option value="job">Full Time Job</option>
-          <option value="learner">Full Time Learner</option>
-          <option value="preferNo">Prefer not to say</option>
-          <option value="other">Other</option>
-        </select>
-      </div>
-  
-      <div class="form-group">
-        <p>Would you recommend freeCodeCamp to a friend?</p>
-        <label>
-          <input
-            name="user-recommend"
-            value="definitely"
-            type="radio"
-            class="input-radio"
-            checked
-          />Definitely</label
-        >
-        <label>
-          <input
-            name="user-recommend"
-            value="maybe"
-            type="radio"
-            class="input-radio"
-          />Maybe</label
-        >
-  
-        <label
-          ><input
-            name="user-recommend"
-            value="not-sure"
-            type="radio"
-            class="input-radio"
-          />Not sure</label
-        >
-      </div>
-  
-      <div class="form-group">
-        <p>
-          What is your favorite feature of freeCodeCamp?
-        </p>
-        <select id="most-like" name="mostLike" class="form-control" required>
-          <option disabled selected value>Select an option</option>
-          <option value="challenges">Challenges</option>
-          <option value="projects">Projects</option>
-          <option value="community">Community</option>
-          <option value="openSource">Open Source</option>
-        </select>
-      </div>
-  
-      <div class="form-group">
-        <p>
-          What would you like to see improved?
-          <span class="clue">(Check all that apply)</span>
-        </p>
-  
-        <label
-          ><input
-            name="prefer"
-            value="front-end-projects"
-            type="checkbox"
-            class="input-checkbox"
-          />Front-end Projects</label
-        >
-        <label>
-          <input
-            name="prefer"
-            value="back-end-projects"
-            type="checkbox"
-            class="input-checkbox"
-          />Back-end Projects</label
-        >
-        <label
-          ><input
-            name="prefer"
-            value="data-visualization"
-            type="checkbox"
-            class="input-checkbox"
-          />Data Visualization</label
-        >
-        <label
-          ><input
-            name="prefer"
-            value="challenges"
-            type="checkbox"
-            class="input-checkbox"
-          />Challenges</label
-        >
-        <label
-          ><input
-            name="prefer"
-            value="open-source-community"
-            type="checkbox"
-            class="input-checkbox"
-          />Open Source Community</label
-        >
-        <label
-          ><input
-            name="prefer"
-            value="gitter-help-rooms"
-            type="checkbox"
-            class="input-checkbox"
-          />Gitter help rooms</label
-        >
-        <label
-          ><input
-            name="prefer"
-            value="videos"
-            type="checkbox"
-            class="input-checkbox"
-          />Videos</label
-        >
-        <label><input name="prefer" type="checkbox" class="input-checkbox" value="city"/>City Meetups</label>
-        <label><input
-            name="prefer"
-            value="wiki"
-            type="checkbox"
-            class="input-checkbox"
-          />Wiki</label
-        >
-        <label
-          ><input
-            name="prefer"
-            value="forum"
-            type="checkbox"
-            class="input-checkbox"
-          />Forum</label
-        >
-        <label
-          ><input
-            name="prefer"
-            value="additional-courses"
-            type="checkbox"
-            class="input-checkbox"
-          />Additional Courses</label
-        >
-      </div>
-  
-      <div class="form-group">
-        <p>Any comments or suggestions?</p>
-        <textarea
-          id="comments"
-          class="input-textarea"
-          name="comment"
-          placeholder="Enter your comment here..."
-        ></textarea>
-      </div>
-  
-      <div class="form-group">
-        <button type="submit" id="submit" class="submit-button">
-          Submit
-        </button>
-      </div>
-    </form>
-  </div>
-  
-</body>
+      <div class="divider md"></div>
+      <p class="note">* The % Daily Value (DV) tells you how much a nutrient in a serving of food contributes to a daily diet. 2,000 calories a day is used for general nutrition advice.</p>
+    </div>
+  </body>
 </html>
