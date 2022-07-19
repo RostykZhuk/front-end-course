@@ -1,321 +1,193 @@
-:root {
-  --building-color1: #aa80ff;
-  --building-color2: #66cc99;
-  --building-color3: #cc6699;
-  --building-color4: #538cc6;
-  --window-color1: #bb99ff;
-  --window-color2: #8cd9b3;
-  --window-color3: #d98cb3;
-  --window-color4: #8cb3d9;
+*,
+::before,
+::after {
+  padding: 0;
+  margin: 0;
 }
 
-* {
+html {
+  font-size: 62.5%;
   box-sizing: border-box;
 }
 
 body {
-  height: 100vh;
-  margin: 0;
-  overflow: hidden;
+  font-family: 'Baskervville', serif;
+  color: linen;
+  background-color: rgb(20, 30, 40);
 }
 
-.background-buildings, .foreground-buildings {
+h1 {
+  font-family: 'Anton', sans-serif;
+}
+
+h2, h3, h4, h5, h6 {
+  font-family: 'Raleway', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: linen;
+}
+
+main {
+  display: grid;
+  grid-template-columns: minmax(2rem, 1fr) minmax(min-content, 94rem) minmax(2rem, 1fr);
+  row-gap: 3rem;
+}
+
+img {
   width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-evenly;
-  position: absolute;
-  top: 0;
+  object-fit: cover;
 }
 
-.building-wrap {
-  display: flex;
-  flex-direction: column;
+hr {
+  margin: 1.5rem 0;
+  border: 1px solid rgba(120, 120, 120, 0.6);
+}
+
+.heading {
+  grid-column: 2 / 3;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 1.5rem;
+}
+
+.text {
+  grid-column: 2 / 3;
+  font-size: 1.8rem;
+  letter-spacing: 0.6px;
+  column-width: 25rem;
+  text-align: justify;
+}
+
+.hero {
+  grid-column: 1 / -1;
+  position: relative;
+}
+
+.hero-title {
+  text-align: center;
+  color: orangered;
+  font-size: 8rem;
+}
+
+.hero-subtitle {
+  font-size: 2.4rem;
+  color: orangered;
+  text-align: center;
+}
+
+.author {
+  font-size: 2rem;
+  font-family: "Raleway", sans-serif;
+}
+
+.author-name a:hover {
+  background-color: #306203;
+}
+
+.publish-date {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.social-icons {
+  display: grid;
+  font-size: 3rem;
+  grid-template-columns: repeat(5, 1fr);
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
   align-items: center;
 }
 
-.window-wrap {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
+.first-paragraph::first-letter {
+  font-size: 6rem;
+  color: orangered;
+  float: left;
+  margin-right: 1rem;
 }
 
-.sky {
-  background: radial-gradient(
-      closest-corner circle at 15% 15%,
-      #ffcf33,
-      #ffcf33 20%,
-      #ffff66 21%,
-      #bbeeff 100%
-    );
+.quote {
+  color: #00beef;
+  font-size: 2.4rem;
+  text-align: center;
+  font-family: "Raleway", sans-serif;
 }
 
-/* BACKGROUND BUILDINGS - "bb" stands for "background building" */
-.bb1 {
-  width: 10%;
-  height: 70%;
+.quote::before {
+  content: '" ';
 }
 
-.bb1a {
-  width: 70%;
-}
-  
-.bb1b {
-  width: 80%;
-}
-  
-.bb1c {
-  width: 90%;
+.quote::after {
+  content: ' "';
 }
 
-.bb1d {
-  width: 100%;
-  height: 70%;
-  background: linear-gradient(
-      var(--building-color1) 50%,
-      var(--window-color1)
-    );
+.text-with-images {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  column-gap: 3rem;
+  margin-bottom: 3rem;
 }
 
-.bb1-window {
-  height: 10%;
-  background: linear-gradient(
-      var(--building-color1),
-      var(--window-color1)
-    );
+.lists {
+  list-style-type: none;
+  margin-top: 2rem;
 }
 
-.bb2 {
-  width: 10%;
-  height: 50%;
+.lists li {
+  margin-bottom: 1.5rem;
 }
 
-.bb2a {
-  border-bottom: 5vh solid var(--building-color2);
-  border-left: 5vw solid transparent;
-  border-right: 5vw solid transparent;
+.list-title, .list-subtitle {
+  color: #00beef;
 }
 
-.bb2b {
-  width: 100%;
-  height: 100%;
-  background: repeating-linear-gradient(
-      var(--building-color2),
-      var(--building-color2) 6%,
-      var(--window-color2) 6%,
-      var(--window-color2) 9%
-    );
+.image-wrapper {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: repeat(3, min-content);
+  gap: 2rem;
+  place-items: center;
 }
 
-.bb3 {
-  width: 10%;
-  height: 55%;
-  background: repeating-linear-gradient(
-      90deg,
-      var(--building-color3),
-      var(--building-color3),
-      var(--window-color3) 15%
-    );
+.image-1, .image-3 {
+  grid-column: 1 / -1;
 }
 
-.bb4 {
-  width: 11%;
-  height: 58%;
-}
-
-.bb4a {
-  width: 3%;
-  height: 10%;
-  background-color: var(--building-color4);
-}
-
-.bb4b {
-  width: 80%;
-  height: 5%;
-  background-color: var(--building-color4);
-}
-  
-.bb4c {
-  width: 100%;
-  height: 85%;
-  background-color: var(--building-color4);
-}
-
-.bb4-window {
-  width: 18%;
-  height: 90%;
-  background-color: var(--window-color4);
-}
-
-/* FOREGROUND BUILDINGS - "fb" stands for "foreground building" */
-.fb1 {
-  width: 10%;
-  height: 60%;
-}
-
-.fb1a {
-  border-bottom: 7vh solid var(--building-color4);
-  border-left: 2vw solid transparent;
-  border-right: 2vw solid transparent;
-}
-
-.fb1b {
-  width: 60%;
-  height: 10%;
-  background-color: var(--building-color4);
-}
-  
-.fb1c {
-  width: 100%;
-  height: 80%;
-  background: repeating-linear-gradient(
-      90deg,
-      var(--building-color4),
-      var(--building-color4) 10%,
-      transparent 10%,
-      transparent 15%
-    ),
-    repeating-linear-gradient(
-      var(--building-color4),
-      var(--building-color4) 10%,
-      var(--window-color4) 10%,
-      var(--window-color4) 90%
-    );
-}
-
-.fb2 {
-  width: 10%;
-  height: 40%;
-}
-
-.fb2a {
-  width: 100%;
-  border-bottom: 10vh solid var(--building-color3);
-  border-left: 1vw solid transparent;
-  border-right: 1vw solid transparent;
-}
-
-.fb2b {
-  width: 100%;
-  height: 75%;
-  background-color: var(--building-color3);
-}
-
-.fb2-window {
-  width: 22%;
-  height: 100%;
-  background-color: var(--window-color3);
-}
-
-.fb3 {
-  width: 10%;
-  height: 35%;
-}
-  
-.fb3a {
-  width: 80%;
-  height: 15%;
-  background-color: var(--building-color1);
-}
-  
-.fb3b {
-  width: 100%;
-  height: 35%;
-  background-color: var(--building-color1);
-}
-
-.fb3-window {
-  width: 25%;
-  height: 80%;
-  background-color: var(--window-color1);
-}
-
-.fb4 {
-  width: 8%;
-  height: 45%;
-  position: relative;
-  left: 10%;
-}
-
-.fb4a {
-  border-top: 5vh solid transparent;
-  border-left: 8vw solid var(--building-color1);
-}
-
-.fb4b {
-  width: 100%;
-  height: 89%;
-  background-color: var(--building-color1);
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.fb4-window {
-  width: 30%;
-  height: 10%;
-  border-radius: 50%;
-  background-color: var(--window-color1);
-  margin: 10%;
-}
-
-.fb5 {
-  width: 10%;
-  height: 33%;
-  position: relative;
-  right: 10%;
-  background: repeating-linear-gradient(
-      var(--building-color2),
-      var(--building-color2) 5%,
-      transparent 5%,
-      transparent 10%
-    ),
-    repeating-linear-gradient(
-      90deg,
-      var(--building-color2),
-      var(--building-color2) 12%,
-      var(--window-color2) 12%,
-      var(--window-color2) 44%
-    );
-}
-
-.fb6 {
-  width: 9%;
-  height: 38%;
-  background: repeating-linear-gradient(
-      90deg,
-      var(--building-color3),
-      var(--building-color3) 10%,
-      transparent 10%,
-      transparent 30%
-    ),
-    repeating-linear-gradient(
-      var(--building-color3),
-      var(--building-color3) 10%,
-      var(--window-color3) 10%,
-      var(--window-color3) 30%
-    );
-}
-
-@media (max-width: 1000px) {
-  :root {
-    --building-color1: #000;
-    --building-color2: #000;
-    --building-color3: #000;
-    --building-color4: #000;
-        --window-color1: #777;
-        --window-color2: #777;
-        --window-color3: #777;
-        --window-color4: #777;
-  }
-  .sky {
-    background: radial-gradient(
-        closest-corner circle at 15% 15%,
-        #ccc,
-        #ccc 20%,
-        #445 21%,
-        #223 100%
-      );
+@media only screen and (max-width: 720px) {
+  .image-wrapper {
+    grid-template-columns: 1fr;
   }
 }
-    
+
+@media only screen and (max-width: 600px) {
+  .text-with-images {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .hero-title {
+    font-size: 6rem;
+  }
+  
+  .hero-subtitle,
+  .author,
+  .quote,
+  .list-title {
+    font-size: 1.8rem;
+  }
+  
+  .social-icons {
+    font-size: 2rem;
+  }
+
+  .text {
+    font-size: 1.6rem;
+  } 
+}
+
+@media only screen and (max-width: 420px) {
+  .hero-title {
+    font-size:4.5rem;
+  }
+}
