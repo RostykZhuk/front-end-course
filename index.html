@@ -1,44 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="stylesheet" href="./styles.css" />
-    <title>Penguin</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  </head>
-
-  <body>
-    <div class="left-mountain"></div>
-    <div class="back-mountain"></div>
-    <div class="sun"></div>
-    <div class="penguin">
-      <div class="penguin-head">
-        <div class="face left"></div>
-        <div class="face right"></div>
-        <div class="chin"></div>
-        <div class="eye left">
-          <div class="eye-lid"></div>
-        </div>
-        <div class="eye right">
-          <div class="eye-lid"></div>
-        </div>
-        <div class="blush left"></div>
-        <div class="blush right"></div>
-        <div class="beak top"></div>
-        <div class="beak bottom"></div>
-      </div>
-      <div class="shirt">
-        <div>💜</div>
-        <p>I CSS</p>
-      </div> 
-      <div class="penguin-body">
-        <div class="arm left"></div>
-        <div class="arm right"></div>
-        <div class="foot left"></div>
-        <div class="foot right"></div>
-      </div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+ <header id="header" class="header">
+  <div class="logo">
+    <img id="header-img" src="https://s3.amazonaws.com/freecodecamp/original_trombones.png" alt="original trombones logo">
+  </div>
+<nav id="nav-bar">
+  <ul style="list-style:none;" >
+    <li ><a class='nav-link' href="#form">Features</a></li>
+    <li ><a class='nav-link' href="#how-it-works" >How It Works</a></li>
+    <li ><a class='nav-link'href="#how-it-works">Pricing</a></li>
+  </ul>
+</nav>
+</header>
+<section class="main-title">
+  <h1>Handcrafted, home-made masterpieces</h1>
+  
+  <form action="https://www.freecodecamp.com/email-submit" id="form">
+    <input name="email" id="email" type="email" placeholder="Enter your email address" class="sub" required />
+    
+    <input id="submit" type="submit" value="Get Started" class="btn" />   
+  </form>
+</section>
+<section class="main-section">
+  <div class="main-info-cont">
+    <div class="main-pic">
+      <i class="fa fa-3x fa-fire"></i>
     </div>
+    <div class="main-info">
+      <h2>Premium Materials</h2>
+      <p>Our trombones use the shiniest brass which is sourced locally. This will increase the longevity of your purchase.</p>
+    </div>
+  </div>
+  <div class="main-info-cont">
+    <div class="main-pic">
+      <i class="fa fa-3x fa-truck"></i>
+    </div>
+    <div class="main-info">
+      <h2>Premium Materials</h2>
+      <p>Our trombones use the shiniest brass which is sourced locally. This will increase the longevity of your purchase.</p>
+    </div>
+  </div>
+  <div class="main-info-cont">
+    <div class="main-pic">
+      <i class="fa fa-3x fa-battery-full" aria-hidden="true"></i>
+    </div>
+    <div class="main-info">
+      <h2>Premium Materials</h2>
+      <p>Our trombones use the shiniest brass which is sourced locally. This will increase the longevity of your purchase.</p>
+    </div>
+  </div>
+</section>
+<section id="how-it-works" class="vid">
+  <div class="vid-container">
+  
+  <div class="video">
+    <iframe id="video" height="315" width="100%" src="https://www.youtube-nocookie.com/embed/y8Yv4pnO7qc?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen=""></iframe>
+  </div>
+  </div>
+</section>
+<footer>
+<section class="info">
+  <div class="pricing-container">
+  <div class="pricing-info">
+    <div class="pricing-box-heading"><p>TENOR TROMBONE</p></div>
+    <p class="price-tag">£600</p>
+    <ol>
+      <li>Lorem ipsum.</li>
+      <li>Lorem ipsum.</li>
+      <li>Lorem ipsum dolor.</li>
+      <li>Lorem ipsum.</li></ol>
+    <button class="btn2">SELECT</button>
+  </div>
+  <div class="pricing-info">
+    <div class="pricing-box-heading"><p>TENOR TROMBONE</p></div>
+    <p class="price-tag">£600</p>
+    <ol>
+      <li>Lorem ipsum.</li>
+      <li>Lorem ipsum.</li>
+      <li>Lorem ipsum dolor.</li>
+      <li>Lorem ipsum.</li></ol>
+    <button class="btn2">SELECT</button>
+  </div>
+  <div class="pricing-info">
+    <div class="pricing-box-heading"><p>TENOR TROMBONE</p></div>
+    <p class="price-tag">£600</p>
+    <ol>
+      <li>Lorem ipsum.</li>
+      <li>Lorem ipsum.</li>
+      <li>Lorem ipsum dolor.</li>
+      <li>Lorem ipsum.</li></ol>
+    <button class="btn2">SELECT</button>
+  </div>
+  </div>
+  
+  
+</section>
+</footer>
 
-    <div class="ground"></div>
-  </body>
+</body>
 </html>
