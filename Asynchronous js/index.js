@@ -58,4 +58,9 @@ order(2000, () => console.log(`${stocks.Fruits[0]} was selected`))
   // Step 8
   .then(() => {
     return order(2000, () => console.log('Serve Ice Cream'));
+  })
+
+  // will work only when our variable is false
+  .catch(() => {
+    console.log('Customer left');
   });
