@@ -5,38 +5,17 @@ let stocks = {
   toppings: ['chocolate', 'peanuts'],
 };
 
-let order = (fruit_name, call_production) => {
-  setTimeout(() => {
-    console.log(`${stocks.Fruits[fruit_name]} was selected`);
-    call_production();
-  }, 2000);
-};
+let is_shop_open = true;
 
-let production = () => {
-  setTimeout(() => {
-    console.log('Production has started');
-
-    setTimeout(() => {
-      console.log('The fruit has been chopped');
-
+let order = (time, work) => {
+  return new Promise((resolve, reject) => {
+    if (is_shop_open) {
       setTimeout(() => {
-        console.log(`${stocks.liquid[0]} and ${stocks.liquid[1]} were added`);
-
-        setTimeout(() => {
-          console.log('The machine was started');
-
-          setTimeout(() => {
-            console.log(`Ice cream placed on ${stocks.holder[0]}`);
-
-            setTimeout(() => {
-              console.log(`${stocks.toppings[0]} as toppings`);
-              console.log('Serve Ice cream');
-            }, 2000);
-          }, 3000);
-        }, 1000);
-      }, 1000);
-    }, 2000);
-  }, 0000);
+        resolve(work());
+      }, 2000);
+    } else {
+      reject(console.log('Our shop is closed'));
+    }
+  });
 };
-
-order(0, production);
+order(2000, () => console.log(`${stocks.Fruits[0]} was selected`));
