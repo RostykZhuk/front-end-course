@@ -1,9 +1,19 @@
-// asynchronous
-console.log('I ');
-console.log('eat ');
+function one(call_two) {
+  console.log('step 1 complete. Please call step 2');
+  call_two();
+}
+function two() {
+  console.log('step 2');
+}
+one(two);
 
-setTimeout(() => {
-  console.log('ice cream ');
-}, 4000);
-console.log('with a ');
-console.log('spoon');
+// -------------------
+
+function three() {
+  console.log('step 3');
+  four();
+}
+function four() {
+  console.log('step 4');
+}
+three();
