@@ -16,17 +16,17 @@ interface UserInterface {
   //creating a function
   getMessage(): string;
 }
-const user: UserInterface = {
+const user_1: UserInterface = {
   name: 'Monster',
   age: 30,
   getMessage() {
     return 'Hello ' + this.name;
   },
 };
-const user2: UserInterface = {
+const user_2: UserInterface = {
   name: 'Jack',
   getMessage() {
     return 'Hello ' + this.name;
   },
 };
-console.log(user.getMessage(), user2.getMessage());
+console.log(user_1.getMessage(), user_2.getMessage());
