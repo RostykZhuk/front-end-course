@@ -18,8 +18,12 @@ let vUknown: unknown = 10;
 
 let s1: string = vAny;
 // error bcs ts doesnt know what type is yet
-let s2: string = vUknown;
+// Converting unknow to string
+let s2: string = vUknown as string;
 
-console.log(vAny.foo());
-console.log(vUknown.foo());
+let pageNumber: string = '1';
+let numericPageNumber: number = pageNumber as unknown as number;
+
+// console.log(vAny.foo());
+// console.log(vUknown.foo());
 //unknow error bcs it doent exist

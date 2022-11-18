@@ -13,7 +13,10 @@ var vAny = 10;
 var vUknown = 10;
 var s1 = vAny;
 // error bcs ts doesnt know what type is yet
+// Converting unknow to string
 var s2 = vUknown;
-console.log(vAny.foo());
-console.log(vUknown.foo());
+var pageNumber = '1';
+var numericPageNumber = pageNumber;
+// console.log(vAny.foo());
+// console.log(vUknown.foo());
 //unknow error bcs it doent exist
