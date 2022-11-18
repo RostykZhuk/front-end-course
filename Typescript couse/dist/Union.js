@@ -1,5 +1,6 @@
 // Type aliases
 var popularTag = ['dragon', 'coffee'];
+var gragonsTag = 'dragon';
 var username = 'alex';
 // Union
 var pageName = '1';

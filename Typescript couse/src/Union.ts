@@ -2,7 +2,9 @@
 
 type ID = string;
 type PopularTag = string;
+type MaybePopularTag = PopularTag | null;
 
+// interface
 interface UserInterface1 {
   id: ID;
   name: string;
@@ -10,6 +12,7 @@ interface UserInterface1 {
 }
 
 const popularTag: PopularTag[] = ['dragon', 'coffee'];
+const gragonsTag: MaybePopularTag = 'dragon';
 let username: string = 'alex';
 // Union
 let pageName: string | number = '1';
